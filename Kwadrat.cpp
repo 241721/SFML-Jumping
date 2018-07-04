@@ -23,6 +23,7 @@ void Kwadrat::pozycja()
 {
     kolizja();
     sciany();
+    bieg();
     ruch();
     opory();
     ksztalt.move(grawitacja);
@@ -51,6 +52,14 @@ void Kwadrat::opory()
     predkosc.x=predkosc.x/1.05;
     skok.x=skok.x/1.05;
     skok.y/=1.05;
+}
+void Kwadrat::bieg()
+{
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)&&kolizja()==true)
+    {
+        if(predkosc.x>0) predkosc.x+=1;
+        else if(predkosc.x<0) predkosc.x-=1;
+    }
 }
 
 

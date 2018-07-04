@@ -13,6 +13,7 @@ private:
     public:
         Kwadrat(sf::Vector2f poz, sf::Vector2f roz);
         void pozycja();
+        void bieg();
         bool kolizja();
         void sciany();
         void ruch();
